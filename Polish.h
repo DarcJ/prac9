@@ -8,8 +8,19 @@
 class Polish
 {
 private:
-    /* data */
+    std::stack <char> operators;
+    std::stack <double> operands;
+    std::stack <double> tempValue;
+ 	int operand1;
+ 	int operand2;
+    char x;
+    std::string equation;
+    char result;
+ 	int count;
 public:
-    Polish(/* args */);
+    Polish();
+    int Setup(std::string polishInput);
+    void Calculate();
+    int Display();
     ~Polish();
 };
