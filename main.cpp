@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//this function will test whether the input is a digit or string
+//Function to aid in the user Input --> returns false when input isnt an integer
 bool deciferInput(char input) {
 	if (isdigit(input) == false) {
 		return false;
@@ -16,12 +16,12 @@ bool deciferInput(char input) {
 
 int main() {
 
-	
+	//Set up input
 	string userInput;
 	getline(cin,userInput);
     int error =1;
 
-
+	//Check validity of Input --> if not valid cast error message and terminate program 
 	if (userInput.length() == 0 || userInput.length() == 1) {
 		cout << "Error" << endl;
 		return 0;
@@ -32,6 +32,7 @@ int main() {
 		return 0;
 	} 
 
+	//Execute object
 	Polish P;
     error = P.Setup(userInput);
     if (error == 0)
