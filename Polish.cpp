@@ -46,6 +46,7 @@ int Polish::Setup(std::string polishInput){
 		std::cout << "Error" << std::endl;
 		return 0;
 	}
+	
 	//return 1 to represent program is running as should
     return 1;
 }
@@ -99,11 +100,12 @@ void Polish::Calculate(){
  			result = operand1 / operand2;
  		}
  		operands.push(result);
+		 
  	}
 }
 int Polish::Display(){
     if (operands.size() == 1) {
- 		std::cout << equation << " = " << operands.top() << std::endl;
+ 		std::cout << equation << "= " << operands.top() << std::endl;
  	} 
 	else {
  		std::cout << "Error" << std::endl;
